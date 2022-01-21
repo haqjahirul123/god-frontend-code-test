@@ -2,7 +2,8 @@
     width:20rem;
     height: auto;
     margin-left: 1rem; 
-    padding:1px ;   
+    padding:1px ;
+    border: none !important;  
 }
 .bodyType{
     float: left;
@@ -50,18 +51,22 @@
         padding:1px ;   
     }
     .linkPageLearn{
+        width:auto;
         margin-left: 5rem !important;
         text-decoration: none;
         color: rgb(3, 74, 180); 
         font-weight: bold;
+        font-size: small;
     }
     .linkPageShop{
+        width:auto;
         float:right;
         margin-right: 10rem !important;
         margin-bottom:2rem;
         text-decoration: none; 
         color: rgb(3, 74, 180); 
-        font-weight: bold;    
+        font-weight: bold;  
+        font-size: small;  
  }
   }
 

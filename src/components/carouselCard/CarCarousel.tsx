@@ -6,9 +6,9 @@ import styles from './Style.module.css'
 
 import CarCard from "./CarCard";
 import NotFound from '../NotFound';
+import { useEffect, useState } from "react";
 
 const CarCarousel=({CarsInfos})=> {
-  
     //const CarsInfos =props.CarsInfos
     const responsive = {
         desktop: {
@@ -28,7 +28,6 @@ const CarCarousel=({CarsInfos})=> {
         } 
       };
 
-    
       const carInfoCard= CarsInfos.map((CarInfo)=>{
           return (
              <CarCard  key={CarInfo.id} CarInfo={CarInfo}/>  
@@ -43,25 +42,15 @@ const CarCarousel=({CarsInfos})=> {
             draggable={false}
             arrows={false}
             responsive={responsive}
-            //deviceType={responsive.mobile.breakpoint.max.toString()}
             showDots={((typeof window !== "undefined")&&(window.innerWidth > 600))  ? false:true}
             //showDots={responsive.mobile.breakpoint.max < 600 ? true : false}
-           
-           
+            //showDots={ window.innerWidth<responsive.mobile.breakpoint.max  ? true:false}
             ssr={true} // means to render carousel on server-side.
             infinite={true}
-            //autoPlay={this.props.deviceType !== "mobile" ? true : false}
-            //autoPlaySpeed={300}
             keyBoardControl={true}
-            customTransition="all .5"
-            //transitionDuration={5000}
-           // containerClass="carousel-container"
-            //removeArrowOnDeviceType={["tablet", "mobile"]}
-          
+            customTransition="all .5"    
             dotListClass="custom-dot-list-style"
             itemClass="carousel-item-padding-40-px"
-            //customRightArrow={<CustomRightArrow/>}
-            //customLeftArrow={<CustomLeftArrow/>}
             containerClass={styles.containerPaddingBottom}
             customButtonGroup={<CustomButtonGroup />}
             
