@@ -1,0 +1,17 @@
+.searchBox{
+    height:'40px';
+    width:'100%' !important;
+    border-radius:"10px";
+    margin-bottom:"1rem";
+    margin-top:"0.5rem"
+}
+
+@media screen and (max-width: 600px) {
+    input{
+        height:'40px';
+        width:'100%' !important;
+        border-radius:"10px";
+        margin-bottom:"1rem";
+        margin-top:"0.5rem"   
+    }
+}
